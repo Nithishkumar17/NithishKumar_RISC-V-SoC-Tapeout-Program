@@ -26,20 +26,8 @@ By the end of the program, participants are expected to:
 
 
 
----
-
-## 📈 Weekly Progress Tracker
-
-[![Week0](https://img.shields.io/badge/Week%200-Tools%20Setup-success?style=flat-square)](Week0)  
-[![Week1](https://img.shields.io/badge/Week%201-RTL%20GLS-pending?style=flat-square)](Week1/README.md)  
-[![VSD Website](https://img.shields.io/badge/VSD-Official%20Website-blue?style=flat-square)](https://vsdiat.vlsisystemdesign.com/)  
-[![RISC-V](https://img.shields.io/badge/RISC--V-International-green?style=flat-square)](https://riscv.org/)  
-[![Efabless](https://img.shields.io/badge/Efabless-Platform-orange?style=flat-square)](https://efabless.com/)  
-
----
-
 ## 🙏 Acknowledgment  
 
-I am thankful to [**Kunal Ghosh**](https://github.com/kunalg123) and Team **VLSI System Design (VSD)** for the opportunity to participate in the **RISC-V SoC Tapeout Program**.  
+I am thankful to the Team **VLSI System Design (VSD)** for the opportunity to participate in the **RISC-V SoC Tapeout Program**.  
 
-I also acknowledge the support of **RISC-V International**, **India Semiconductor Mission (ISM)**, **VLSI Society of India (VSI)**, and [**Efabless**](https://github.com/efabless) for making this initiative possible.
+I also acknowledge the support of **RISC-V International** and [**Efabless**](https://github.com/efabless) for making this initiative possible.
