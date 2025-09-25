@@ -49,12 +49,12 @@ sudo make install
 ```bash
 sudo apt install -y iverilog
 ```
-![Iverlog Installation Status](Images/iverilog.jpg)
+![Iverlog Installation Status](Images/iverilog_setup.jpg)
 
 ### GTKWave Verilog Installation
 
 ```bash
 sudo apt install -y gtkwave
 ```
-![GTKWave Installation Status](Images/gtkwave.jpg)
+![GTKWave Installation Status](Images/gtkwave_setup.jpg)
 
