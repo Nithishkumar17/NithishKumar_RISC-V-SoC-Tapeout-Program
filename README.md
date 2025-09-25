@@ -1,4 +1,4 @@
-# NithishKumarB_RISC-V-SoC-Tapeout-Program
+# BNithishKumar_RISC-V-SoC-Tapeout-Program
 
 # 💻 RISC-V SoC Tapeout Program – India
 
