@@ -1,4 +1,4 @@
-# 🖥️ Week 0 – Environment Setup & Tool Installation  
+# 💻 Week 0 – Environment Setup & Tool Installation  
 
 This week’s task is to set up the required EDA tools in a **Linux environment**.  
 I am using **WSL (Windows Subsystem for Linux)** with **Ubuntu 22.04 LTS (Jammy Jellyfish)** for this program.  
