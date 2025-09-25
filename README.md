@@ -21,11 +21,11 @@ By the end of the program, participants are expected to:
 
 | Week | Task | Description | Status |
 |------|------|-------------|--------|
-| 0 | [**Task 0**](Week0/Task0/README.md) | 🛠️ Tools Installation — Installed **Icarus Verilog**, **Yosys**, and **GTKWave** | ✅ Done |
-| 1 | [**Task 0**](Week1/README.md) | RTL / GLS Task | ⏳ Pending |
+| 0 |(Week0/Task0/README.md) | 🛠️ Tools Installation — Installed **Icarus Verilog**, **Yosys**, and **GTKWave** | ✅ Done |
+| 1 | (Week1/README.md) | RTL / GLS Task | ⏳ Pending |
 
 
 
 ## 🙏 Acknowledgment  
 
-I am thankful to the Team **VLSI System Design (VSD)** and [**Efabless**](https://github.com/efabless)for the opportunity to participate in the **RISC-V SoC Tapeout Program**.  
+I am thankful to the Team [**VLSI System Design (VSD)**](https://www.vlsisystemdesign.com/) and [**Efabless**](https://github.com/efabless)for the opportunity to participate in the **RISC-V SoC Tapeout Program**.  
