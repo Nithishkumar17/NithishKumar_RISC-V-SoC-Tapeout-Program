@@ -16,7 +16,7 @@ I am using **WSL (Windows Subsystem for Linux)** with **Ubuntu 22.04 LTS (Jammy 
 2. **Icarus Verilog (iverilog)** – Verilog simulation  
 3. **GTKWave** – Waveform viewer
 
-## WSL and Ubuntu Setup
+### WSL and Ubuntu Setup
 
 ```powershell
 wsl --install -d Ubuntu-22.04
@@ -25,7 +25,36 @@ wsl --install -d Ubuntu-22.04
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y build-essential git make python3 python3-venv python3-pip pkg-config curl wget
 ```
-![Ubuntu WSL System Info](Images/WSL_Ubuntu_Setup.jpg)
+![Ubuntu WSL System Info](Images/WSL_ubuntu_setup.jpg)
 
+### Yosys Installation
 
+```bash
+sudo apt update
+
+sudo apt install -y build-essential clang bison flex \
+libreadline-dev gawk tcl-dev libffi-dev git \
+graphviz xdot pkg-config python3 \
+libboost-system-dev libboost-python-dev libboost-filesystem-dev zlib1g-dev
+
+git clone https://github.com/YosysHQ/yosys.git
+cd yosys
+make config-gcc
+make -j$(nproc)
+sudo make install
+```
+![yosys Installation Status](Images/yosys_setup.jpg)
+
+### Icarcus Verilog Installation
+```bash
+sudo apt install -y iverilog
+```
+![Iverlog Installation Status](Images/iverilog.jpg)
+
+### GTKWave Verilog Installation
+
+```bash
+sudo apt install -y gtkwave
+```
+![GTKWave Installation Status](Images/gtkwave.jpg)
 
