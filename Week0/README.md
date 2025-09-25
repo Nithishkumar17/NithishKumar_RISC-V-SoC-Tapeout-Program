@@ -21,10 +21,14 @@ I am using **WSL (Windows Subsystem for Linux)** with **Ubuntu 22.04 LTS (Jammy 
 ```powershell
 wsl --install -d Ubuntu-22.04
 ```
-
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y build-essential git make python3 python3-venv python3-pip pkg-config curl wget
+```
+```html
+<p align="center">
+  <img src="Images/WSL_Ubuntu_Setup.jpg" width="600"/>
+</p>
 ```
 
 
