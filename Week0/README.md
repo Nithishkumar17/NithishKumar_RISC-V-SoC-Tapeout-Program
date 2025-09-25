@@ -10,7 +10,7 @@ I am using **WSL (Windows Subsystem for Linux)** with **Ubuntu 22.04 LTS (Jammy 
 - **Shell:** bash  
 - **Purpose:** To provide a stable environment for RISC-V SoC Tapeout program
 
-- ## 🛠️ Tools Installed  
+## 🛠️ Tools Installed  
 
 1. **Yosys** – RTL synthesis tool  
 2. **Icarus Verilog (iverilog)** – Verilog simulation  
