@@ -43,7 +43,7 @@ make config-gcc
 make -j$(nproc)
 sudo make install
 ```
-![yosys Installation Status](Images/yosys_setup.jpg)
+!(Images/yosys_setup.jpg)
 
 ### Icarcus Verilog Installation
 ```bash
