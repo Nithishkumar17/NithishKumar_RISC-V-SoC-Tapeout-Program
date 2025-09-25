@@ -28,6 +28,4 @@ By the end of the program, participants are expected to:
 
 ## 🙏 Acknowledgment  
 
-I am thankful to the Team **VLSI System Design (VSD)** for the opportunity to participate in the **RISC-V SoC Tapeout Program**.  
-
-I also acknowledge the support of **RISC-V International** and [**Efabless**](https://github.com/efabless) for making this initiative possible.
+I am thankful to the Team **VLSI System Design (VSD)** and [**Efabless**](https://github.com/efabless)for the opportunity to participate in the **RISC-V SoC Tapeout Program**.  
