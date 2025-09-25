@@ -25,7 +25,7 @@ wsl --install -d Ubuntu-22.04
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y build-essential git make python3 python3-venv python3-pip pkg-config curl wget
 ```
-![Ubuntu WSL System Info](Week0/Images/WSL_Ubuntu_Setup.jpg)
+![Ubuntu WSL System Info](Images/WSL_Ubuntu_Setup.jpg)
 
 
 
