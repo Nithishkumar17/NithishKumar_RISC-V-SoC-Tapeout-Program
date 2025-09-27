@@ -28,7 +28,7 @@
 
 ---
 
-## 🔄 RTL to Waveform Flow
+## 🔄 RTL → Waveform Flow
 1. Write RTL (`good_mux.v`) + testbench (`tb_good_mux.v`).  
 2. Simulate with **Icarus Verilog**.  
 3. Run executable to produce `.vcd` file.  
@@ -45,15 +45,36 @@ iverilog good_mux.v tb_good_mux.v
 # Open waveform
 gtkwave good_mux.vcd
 ```
-```vim
-# Usefule vim Commands to edit/view verilog files
+---
+
+## 🔄 RTL → Netlist Flow (via Yosys)
+
+1. Launch **Yosys**.
+2. Load the standard cell library (`.lib`).
+3. Read the RTL design (`good_mux.v`)
+4. Run synthesis (synth -top good_mux).
+5. Map design to standard cells using (`abc`).
+6. Write the synthesized netlist to a Verilog file.
+
+### 🧪 Simulation Commands
+```bash
+# Inside yosys shell
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog good_mux.v
+synth -top good_mux
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog good_mux_netlist.v
+```
+---
+```gvim
+# Useful gvim commands to edit/view verilog_files
 gvim -p good_mux.v tb_good_mux.v   # Open multiple files in tabs
 :tabn                             # Next tab
 :tabp                             # Previous tab
 :tabc                             # Close current tab
 
 :i                                # Insert mode
-<Esc>                             # Exit insert mode (back to normal mode)
+<Esc>                             # Exit insert mode
 
 :se nu                            # Show line numbers
 :se nonu                          # Hide line numbers
@@ -68,13 +89,5 @@ gvim -p good_mux.v tb_good_mux.v   # Open multiple files in tabs
 :sp filename.v                     # Horizontal split with another file
 Ctrl+w w                           # Switch between split windows
 ```
-``` bash
-yosys
 
-# Inside yosys shell
-read_liberty -lib /absolute/path/to/sky130_fd_sc_hd__tt_025C_1v80.lib
-read_verilog good_mux.v
-synth -top good_mux
-abc -liberty /absolute/path/to/sky130_fd_sc_hd__tt_025C_1v80.lib
-write_verilog good_mux_netlist.v
-```
+**For all simulation, synthesis, and waveform outputs, please refer to the Lab_Images folder in the corresponding week’s directory.**
