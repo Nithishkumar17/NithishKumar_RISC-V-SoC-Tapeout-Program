@@ -19,10 +19,11 @@ By the end of the program, participants are expected to:
 
 ## 📅 Weekly Task Overview
 
-| Week | Task | Description | Status |
-|------|------|-------------|--------|
-| 0 |(Week0/Task0/README.md) | 🛠️ Tools Installation — Installed **Icarus Verilog**, **Yosys**, and **GTKWave** | ✅ Done |
-| 1 | (Week1/README.md) | RTL / GLS Task | ⏳ Pending |
+| Week | Task  Status |
+|------|------|--------|
+| 0 |(Week0/Installation_Images/README.md) | ✅ Done |
+| 1 | (Week1/Day1/Day2/Day3/Day4/Day5/README.md) | ✅ Done |
+| 2 | (Week1) | ⏳ Pending |
 
 
 
