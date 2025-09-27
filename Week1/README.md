@@ -35,7 +35,7 @@
 4. View waveforms in *GTKWave*.  
 
 ### 🧪 Simulation Commands
-bash
+```bash
 # Compile RTL + testbench
 iverilog good_mux.v tb_good_mux.v
 
@@ -44,7 +44,7 @@ iverilog good_mux.v tb_good_mux.v
 
 # Open waveform
 gtkwave good_mux.vcd
-
+```
 ---
 
 ## 🔄 RTL → Netlist Flow (via Yosys)
@@ -57,16 +57,16 @@ gtkwave good_mux.vcd
 6. Write the synthesized netlist to a Verilog file.
 
 ### 🧪 Simulation Commands
-bash
+```bash
 # Inside yosys shell
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog good_mux.v
 synth -top good_mux
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog good_mux_netlist.v
-
+```
 ---
-gvim
+```gvim
 # Useful gvim commands to edit/view verilog_files
 gvim -p good_mux.v tb_good_mux.v   # Open multiple files in tabs
 :tabn                             # Next tab
@@ -88,6 +88,6 @@ gvim -p good_mux.v tb_good_mux.v   # Open multiple files in tabs
 :vs filename.v                     # Vertical split with another file
 :sp filename.v                     # Horizontal split with another file
 Ctrl+w w                           # Switch between split windows
-
+```
 
 *For all simulation, synthesis, and waveform outputs, please refer to the Lab_Images folder in the corresponding week’s directory.*
