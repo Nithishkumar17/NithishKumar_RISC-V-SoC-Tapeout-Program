@@ -28,7 +28,7 @@
 
 ---
 
-## 🔄 RTL → Waveform Flow
+## 🔄 RTL → Waveform Flow (Iverilog & GTKWave)
 1. Write RTL (good_mux.v) + testbench (tb_good_mux.v).  
 2. Simulate with *Icarus Verilog*.  
 3. Run executable to produce .vcd file.  
