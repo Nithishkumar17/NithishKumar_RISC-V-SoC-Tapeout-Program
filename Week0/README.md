@@ -25,7 +25,7 @@ wsl --install -d Ubuntu-22.04
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y build-essential git make python3 python3-venv python3-pip pkg-config curl wget
 ```
-![Ubuntu WSL System Info](Images/WSL_ubuntu_setup.jpg)
+![Ubuntu WSL System Info](Installation_Images/WSL_ubuntu_setup.jpg)
 
 ### Yosys Installation
 
@@ -43,18 +43,18 @@ make config-gcc
 make -j$(nproc)
 sudo make install
 ```
-![Yosys Installation Setup](Images/yosys_setup.jpg)
+![Yosys Installation Setup](Installation_Images/yosys_setup.jpg)
 
 ### Icarcus Verilog Installation
 ```bash
 sudo apt install -y iverilog
 ```
-![Iverlog Installation Status](Images/iverilog_setup.jpg)
+![Iverlog Installation Status](Installation_Images/iverilog_setup.jpg)
 
 ### GTKWave Verilog Installation
 
 ```bash
 sudo apt install -y gtkwave
 ```
-![GTKWave Installation Status](Images/gtkwave_setup.jpg)
+![GTKWave Installation Status](Installation_Images/gtkwave_setup.jpg)
 
