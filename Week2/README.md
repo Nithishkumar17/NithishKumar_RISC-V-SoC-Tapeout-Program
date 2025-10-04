@@ -73,11 +73,9 @@ BabySoC uses a **10-bit DAC** for digital-to-analog conversion and file output.
 ---
 
 ### Important Questions
-1. **What is a SoC?** ✔️ Explained  
-2. **Components of a typical SoC?** ✔️ Explained  
-3. **Why BabySoC is a simplified model?**  
+1. **Why BabySoC is a simplified model?**  
    → Compact, easy to learn, tests open IPs (PLL & DAC), RVMYTH core is simple & customizable.  
-4. **Role of functional modelling before RTL & physical design?**  
+2. **Role of functional modelling before RTL & physical design?**  
    → Represents **what the chip does**, not how it’s built. Critical for verification and parallel software development, saving costs before fabrication.
 
 ---
