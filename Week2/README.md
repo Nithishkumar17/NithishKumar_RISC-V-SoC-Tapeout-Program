@@ -130,7 +130,7 @@ cd output/pre_synth_sim
 gtkwave pre_synth_sim.vcd
 ```
 ## Presynthesis Implementation
-![Presynthesis](Lab_Image/Presynthesis)
+![Presynthesis](Lab_image/Presynthesis.jpg)
 
 ## Final Folder Tree Setup will be like:
 
@@ -150,7 +150,7 @@ gtkwave pre_synth_sim.vcd
 └── compiled_tlv/         # Holds compiled intermediate files if needed
 ```
 ## 🔍 Pre-Synthesis Simulation Observations
-![Presynthesis](Lab_Images/Presynthesis_OP)
+![Presynthesis](Lab_Images/Presynthesis_OP.jpg)
 ### ⏱️ Clock
 - **Asserted** at `12.5 ns`, **deasserted** at `25 ns`
 - Effective clock period = `25 ns`
@@ -175,5 +175,5 @@ V_{OUT} = \frac{rv\_to\_dac}{1023}
   \[
   V_{OUT} = \frac{946}{1023} \approx 0.925 \ \text{V}
   \]
-![Presynthesis](Lab_Images/Presynthesis_OP_Details)
+![Presynthesis](Lab_Images/Presynthesis_OP_Details.jpg)
 
