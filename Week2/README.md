@@ -196,7 +196,7 @@ show vsdbabysoc
 
 </details>
 <details>
-<summary><h2>RTL-SYNTHESIS</h2></summary>
+<summary><h2>POST-SYNTHESIS</h2></summary>
 
 </details>
 
