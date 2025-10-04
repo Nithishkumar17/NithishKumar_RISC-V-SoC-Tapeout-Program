@@ -161,7 +161,7 @@ gtkwave pre_synth_sim.vcd
 ### 🎚 RV → DAC Conversion
 - `rv_to_dac` produces a 10-bit digital value (`0–1023`)
 - DAC output is computed as:
-
+```
 \[
 V_{OUT} = \frac{rv\_to\_dac}{1023}
 \]
@@ -175,5 +175,6 @@ V_{OUT} = \frac{rv\_to\_dac}{1023}
   \[
   V_{OUT} = \frac{946}{1023} \approx 0.925 \ \text{V}
   \]
+```
 ![Presynthesis](Lab_Images/Presynthesis_OP_Details.jpg)
 
