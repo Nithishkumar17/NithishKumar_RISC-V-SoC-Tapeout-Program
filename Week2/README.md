@@ -120,23 +120,6 @@ sandpiper-saas -i ./src/module/*.tlv \
                -p verilog \
                --outdir ./src/module/
 ```
-</details>
-
-<details>
-<summary><h2>PRE_SYNTHESIS</h2></summary>
-   
-```bash
-mkdir -p output/pre_synth_sim
-iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM  -I src/include -I src/module src/module/testbench.v
-```
-```bash
-cd output/pre_synth_sim
-./pre_synth_sim.out
-gtkwave pre_synth_sim.vcd
-```
-## Presynthesis Implementation
-![Presynthesis](Lab_Images/Presynthesis.jpg)
-
 ## Final Folder Tree Setup will be like:
 
 ```txt
@@ -154,6 +137,22 @@ gtkwave pre_synth_sim.vcd
 └── output/
 └── compiled_tlv/         # Holds compiled intermediate files if needed
 ```
+</details>
+
+<details>
+<summary><h2>PRE_SYNTHESIS</h2></summary>
+   
+```bash
+mkdir -p output/pre_synth_sim
+iverilog -o output/pre_synth_sim/pre_synth_sim.out -DPRE_SYNTH_SIM  -I src/include -I src/module src/module/testbench.v
+```
+```bash
+cd output/pre_synth_sim
+./pre_synth_sim.out
+gtkwave pre_synth_sim.vcd
+```
+## Presynthesis Implementation
+![Presynthesis](Lab_Images/Presynthesis.jpg)
 ## 🔍 Pre-Synthesis Simulation Observations
 ![Presynthesis_sim](Lab_Images/Presynthesis_OP.jpg)
 ### ⏱️ Clock
@@ -203,6 +202,25 @@ show vsdbabysoc
 </details>
 <details>
 <summary><h2>POST-SYNTHESIS</h2></summary>
+
+All paths in the commands below are relative to `VSDBabySoC/`
+
+```bash
+mkdir output/post_synth_sim
+iverilog -o output/post_synth_sim/post_synth_sim.out -DPOST_SYNTH_SIM  -I src/include/ -I src/module/ src/module/testbench.v
+
+Note: Resolved the syntax error by replacing the corrupted sky130_fd_sc_hd.v PDK file from the Week 2 repository with the working version from the Week 1 repository.
+ ```
+```bash
+cd output/post_synth_sim
+./post_synth_sim.out
+gtkwave post_synth_sim.vcd
+```
+## Postsynthesis Implementation
+![Postsynthesis](Lab_Images/Postsynthesis.jpg)
+## 🔍 Pre-Synthesis Simulation Observations
+![Postsynthesis_sim](Lab_Images/Postsynthesis_OP.jpg)
+![Postsynthesis](Lab_Images/Postsynthesis_OP_Details.jpg)
 
 </details>
 
