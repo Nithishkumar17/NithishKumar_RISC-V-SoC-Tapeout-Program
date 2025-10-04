@@ -171,3 +171,35 @@ Example from the Simulation: if `rv_to_dac = 117
 ![Presynthesis](Lab_Images/Presynthesis_OP_Details.jpg)
 </details>
 
+<details>
+<summary><h2>RTL-SYNTHESIS</h2></summary>
+
+> All paths in the commands below are relative to `VSDBabySoC/`.
+**Open Yosys**
+```bash
+yosys
+read_verilog -sv -I src/include/ -I src/module/ \
+    src/module/vsdbabysoc.v \
+    src/module/clk_gate.v \
+    src/module/rvmyth.v
+```
+```bash
+read_liberty -lib src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -lib src/lib/avsddac.lib
+read_liberty -lib src/lib/avsdpll.lib
+read_liberty -lib src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+```bash
+synth -top vsdbabysoc
+write_verilog vsdbabysoc_synth_net.v
+show vsdbabysoc
+```
+![Netlist_Implemention](Lab_Images/Netlist_Implementation.jpg)
+![Netlist](Lab_Images/VSDbabysoc_Netlist.jpg)
+
+</details>
+<details>
+<summary><h2>RTL-SYNTHESIS</h2></summary>
+
+</details>
+
