@@ -191,7 +191,6 @@ read_verilog -sv -I src/include/ -I src/module/ src/module/vsdbabysoc.v src/modu
 read_liberty -lib src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_liberty -lib src/lib/avsddac.lib
 read_liberty -lib src/lib/avsdpll.lib
-read_liberty -lib src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 ```bash
 synth -top vsdbabysoc
