@@ -85,6 +85,7 @@ BabySoC uses a **10-bit DAC** for digital-to-analog conversion and file output.
 ## 📖 Part 2 – Labs (Hands-on Functional Modelling)
 <details>
 <summary><h2>VSDBABYSOC-SETUP</h2></summary>
+   
 ### Tools Installed
 - **Icarus Verilog (`iverilog`)** → compile Verilog modules.  
 - **GTKWave** → view waveform files (`.vcd`).  
