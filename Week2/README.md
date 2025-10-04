@@ -170,8 +170,9 @@ gtkwave pre_synth_sim.vcd
 - `rv_to_dac` produces a 10-bit digital value (`0–1023`)
 - DAC output is computed as:
 ```
-V_OUT = rv_to_dac/1023
-Example from the Simulation: if `rv_to_dac = 117
+V_OUT = rv_to_dac/1023 * vrf
+where, vref is set as 1V
+Example from the Simulation: if rv_to_dac = 117
   V_OUT = 17/1023
   V_OUT = 0.166 (The Calculation is matchning with output
 ```
