@@ -129,6 +129,9 @@ cd output/pre_synth_sim
 ./pre_synth_sim.out
 gtkwave pre_synth_sim.vcd
 ```
+## Presynthesis Implementation
+![Presynthesis](Lab_Image/Presynthesis)
+
 ## Final Folder Tree Setup will be like:
 
 ```txt
@@ -146,5 +149,31 @@ gtkwave pre_synth_sim.vcd
 └── output/
 └── compiled_tlv/         # Holds compiled intermediate files if needed
 ```
+## 🔍 Pre-Synthesis Simulation Observations
+![Presynthesis](Lab_Images/Presynthesis_OP)
+### ⏱️ Clock
+- **Asserted** at `12.5 ns`, **deasserted** at `25 ns`
+- Effective clock period = `25 ns`
+- Frequency = **1 / 25 ns = 40 MHz**
 
+👉 Note: `12.5 ns` is the half-period, so the full cycle is 25 ns → 40 MHz.
+
+### 🎚 RV → DAC Conversion
+- `rv_to_dac` produces a 10-bit digital value (`0–1023`)
+- DAC output is computed as:
+
+\[
+V_{OUT} = \frac{rv\_to\_dac}{1023}
+\]
+
+- Example: if `rv_to_dac = 903` →  
+  \[
+  V_{OUT} = \frac{903}{1023} \approx 0.882 \ \text{V}
+  \]
+
+- Peak value at `rv_to_dac = 946` →  
+  \[
+  V_{OUT} = \frac{946}{1023} \approx 0.925 \ \text{V}
+  \]
+![Presynthesis](Lab_Images/Presynthesis_OP_Details)
 
