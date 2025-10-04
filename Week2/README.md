@@ -158,7 +158,7 @@ gtkwave pre_synth_sim.vcd
 └── compiled_tlv/         # Holds compiled intermediate files if needed
 ```
 ## 🔍 Pre-Synthesis Simulation Observations
-![Presynthesis](Lab_Images/Presynthesis_OP.jpg)
+![Presynthesis_sim](Lab_Images/Presynthesis_OP.jpg)
 ### ⏱️ Clock
 - **Asserted** at `12.5 ns`, **deasserted** at `25 ns`
 - Effective clock period = `25 ns`
