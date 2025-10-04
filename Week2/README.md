@@ -133,7 +133,7 @@ gtkwave pre_synth_sim.vcd
 ```
 ## Final Folder Tree Setup will be like:
 
-~/VLSI/VSDBabySoC/
+VSDBabySoC/
 ├── src/
 │   ├── include/
 │   │   ├── sandpiper.vh
