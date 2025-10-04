@@ -83,7 +83,8 @@ BabySoC uses a **10-bit DAC** for digital-to-analog conversion and file output.
 
 
 ## 📖 Part 2 – Labs (Hands-on Functional Modelling)
-
+<details>
+<summary><h2>PRE_SYNTHESIS</h2></summary>
 ### Tools Installed
 - **Icarus Verilog (`iverilog`)** → compile Verilog modules.  
 - **GTKWave** → view waveform files (`.vcd`).  
@@ -162,19 +163,11 @@ gtkwave pre_synth_sim.vcd
 - `rv_to_dac` produces a 10-bit digital value (`0–1023`)
 - DAC output is computed as:
 ```
-\[
-V_{OUT} = \frac{rv\_to\_dac}{1023}
-\]
-
-- Example: if `rv_to_dac = 903` →  
-  \[
-  V_{OUT} = \frac{903}{1023} \approx 0.882 \ \text{V}
-  \]
-
-- Peak value at `rv_to_dac = 946` →  
-  \[
-  V_{OUT} = \frac{946}{1023} \approx 0.925 \ \text{V}
-  \]
+V_OUT = rv_to_dac/1023
+Example from the Simulation: if `rv_to_dac = 117
+  V_OUT = 17/1023
+  V_OUT = 0.166 (The Calculation is matchning with output
 ```
 ![Presynthesis](Lab_Images/Presynthesis_OP_Details.jpg)
+</details>
 
