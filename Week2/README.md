@@ -194,7 +194,7 @@ read_liberty -lib src/lib/avsdpll.lib
 ```
 ```bash
 synth -top vsdbabysoc
-write_verilog vsdbabysoc_synth_net.v
+write_verilog src/module/vsdbabysoc.synth.v
 show vsdbabysoc
 ```
 ![Netlist_Implemention](Lab_Images/Netlist_Implementation.jpg)
