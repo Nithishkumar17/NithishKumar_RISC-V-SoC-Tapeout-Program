@@ -138,7 +138,7 @@ cd output/pre_synth_sim
 gtkwave pre_synth_sim.vcd
 ```
 ## Presynthesis Implementation
-![Presynthesis](Lab_image/Presynthesis.jpg)
+![Presynthesis](Lab_images/Presynthesis.jpg)
 
 ## Final Folder Tree Setup will be like:
 
