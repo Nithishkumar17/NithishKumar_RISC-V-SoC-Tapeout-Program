@@ -23,7 +23,7 @@ By the end of the program, participants are expected to:
 |------|------|--------|
 | 0 |(Week0/Installation_Images/README.md) | ✅ Done |
 | 1 | (Week1/Day1/Day2/Day3/Day4/Day5/README.md) | ✅ Done |
-| 2 | (Week2) | ⏳ Pending |
+| 2 | (Week2) | ✅ Done |
 
 
 
