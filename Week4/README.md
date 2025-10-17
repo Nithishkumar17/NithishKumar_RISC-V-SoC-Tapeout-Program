@@ -176,7 +176,7 @@ Day 2 focuses on short-channel NMOS effects, CMOS voltage transfer characteristi
 4. Velocity Saturation
 
 ### Full Drain Current Equation (Short Channel, unified model)
-ID = (1/2) * kn * (VGS-vmin) –( Vmin² /2)* (1 + λ * VDS)
+ID = kn * (VGS-vmin) –( Vmin² /2)* (1 + λ * VDS)
 
 
 Where:  
@@ -257,7 +257,123 @@ plot -vdd#branch
 ![Short Channel VGS Output](Lab_Images/shortchannel_vgs_output.jpg)  
 **Observation:** Threshold voltage (Vth) found to be **0.74 V** from this graph.
 
+# Day 3
 
+---
 
+## Overview
+Day 3 focuses on **CMOS inverter VTC analysis**, SPICE deck creation, and evaluation of **switching threshold**, **rise/fall delay**, and **robustness** across multiple W/L ratios.
 
+---
 
+## VTC and CMOS SPICE Setup
+- SPICE deck for CMOS inverter includes:
+  - Circuit connectivity
+  - Sweep input data
+  - Netlist of the circuit
+- Note: Vin / VDD is often scaled as \( 10 \times \) channel length (in μm)
+- Proper VTC alignment: **PMOS width (W) ≈ 2 × NMOS width**  
+- CMOS inverter robustness evaluated by:
+  1. Switching threshold (Vm)
+  2. Noise margin
+  3. Power supply scalability
+  4. Device variation
+
+---
+
+- **Definition:** Input voltage where Vin = Vout  
+- Condition:  
+  VDS = VGS,  IDS_P = - IDS_N
+
+- **Drain Current Equations:**
+
+  IDS_N = kn * (Vm - Vt) * VDSAT_N - (VDSAT_N^2 / 2)
+
+  IDS_P = kp * (Vm - VDD - Vt) * VDSAT_P - (VDSAT_P^2 / 2)
+
+- **Equating currents:**
+
+  Vm = r * VDD / (1 + r),  where r = (kp * VDSAT_P) / (kn * VDSAT_N)
+
+- kn, kp = transconductance × (W/L)  
+- Vm changes with W/L ratio
+----
+
+## Lab – Day 3
+
+### Part 1: Switching Threshold and Rise/Fall Time from VTC Graph
+
+**Objective:**  
+Determine the **switching threshold (Vm)** and **rise/fall delay** of a CMOS inverter using the VTC graph.
+
+**Procedure & Observations:**
+
+1. VTC SPICE simulation is run for the CMOS inverter.
+2. **Switching Threshold (Vm):**  
+   - Draw a 45° line from the origin on the VTC graph.
+   - The intersection point of this line with the VTC curve is taken as **Vm**.
+   - Observed values:  
+     - Vm = 0.879 V, 0.844 V
+3. **Rise/Fall Delay:**  
+   - From the transient SPICE simulation:
+     - **Fall delay:** Difference between the midpoint of **input rising edge** and **output falling edge**.
+     - **Rise delay:** Difference between the midpoint of **input falling edge** and **output rising edge**.
+   - Observed values:  
+     - Rise time = 0.3 ns  
+     - Fall time = 0.3 ns
+
+**Images:**
+
+- VTC SPICE Deck  
+  ![VTC SPICE Deck](Lab_Images/vtc_spice_deck.jpg)
+
+- VTC Code  
+  ![VTC Code](Lab_Images/vtc_code.jpg)
+
+- VTC Output  
+  ```bash
+  ngspice day3_inv_vtc_Wp084_Wn036.spice  
+  ```
+  ```ngspice 
+  plot -vdd#branch
+  ```
+  ![VTC Output](Lab_Images/vtc_output.jpg)
+
+- Switching Threshold  
+  ![Switching Threshold](Lab_Images/switching_threshold.jpg)
+
+- Rise and Fall Delay 
+   ```bash
+  ngspice day3_inv_tran_Wp084_Wn036.spice  
+  ```
+  ```ngspice 
+  plot out vs time in
+  ```
+  ![Rise Delay](Lab_Images/rise_delay.jpg)
+  ![Fall Delay](Lab_Images/fall_delay.jpg)
+
+---
+
+### Part 2: Multiple W/L Ratio Analysis
+
+**Objective:**  
+Analyze CMOS inverter behavior under **different W/L ratios** (PMOS width varied, NMOS width constant) to observe trends in switching threshold and rise/fall delay.
+
+**Procedure & Observations:**
+
+1. Several W/L combinations are simulated:
+   - W = 0.375 μm, 2W, 3W, 4W, 5W  
+   - L = 0.25 μm  
+2. **Trends Observed:**  
+   - Switching threshold Vm remains nearly constant across different ratios.
+   - Rise and fall delays are almost unchanged except when **PMOS width = 2 × NMOS width**, where **rise = fall delay**.
+   - This ratio gives a **balanced delay** suitable for **clock cell buffers**.
+   - Other ratios can be used in **datapath circuits** where asymmetric delays may be acceptable.
+3. **Application:**  
+   - CMOS inverter robustness ensures consistent switching threshold and stable timing across process variations.
+   - Selecting PMOS width = 2 × NMOS width is a common design choice for **balanced inverter circuits**.
+
+**Image Placeholder:**
+
+- Robust Table / Multiple W/L Ratios  
+  ![Robust Table](Lab_Images/robust_table.jpg)
