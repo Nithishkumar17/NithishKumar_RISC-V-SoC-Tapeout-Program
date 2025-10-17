@@ -130,7 +130,7 @@ The simulation setup and waveform analysis view in SPICE.
 ngspice day1_nfet_idvds_L2_W5.spice 
 ```
 ```ngspice 
-plot -#vddbranch
+plot -vdd#branch
 ```
 
 ![SPICE Simulation](Lab_Images/spice_simulation.jpg)
