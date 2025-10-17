@@ -100,7 +100,7 @@ This shows ID slightly depends on VDS due to effective channel shortening.
 - SPICE simulates transistor-level models to extract delay, slew, and current.
 - SPICE verifies STA assumptions.
 
-![drain_current](Lab_Images/Id_current.jpg)
+![drain_current](Lab_Images/Id_Current.jpg)
 
 ---
 
