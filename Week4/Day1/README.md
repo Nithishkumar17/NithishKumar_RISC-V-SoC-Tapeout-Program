@@ -100,8 +100,47 @@ This shows ID slightly depends on VDS due to effective channel shortening.
 - SPICE simulates transistor-level models to extract delay, slew, and current.
 - SPICE verifies STA assumptions.
 
+![drain_current](Lab_Images/Id_current.jpg)
+
 ---
 
-## Lab: Day 1 
+# Week 4 – CMOS Circuit Design & SPICE Simulation  
+**Lab – Day 1**
+
+---
+
+## 1) SPICE Netlist
+This image shows the SPICE netlist used for the simulation.
+
+![SPICE Netlist](Lab_Images/spice_netlist.jpg)
+
+---
+
+## 2) SPICE Code
+The SPICE code for the circuit and model definitions.
+
+![SPICE Code](Lab_Images/spice_code.png)
+
+---
+
+## 3) SPICE Simulation
+The simulation setup and waveform analysis view in SPICE.
+
+![SPICE Simulation](Lab_Images/spice_simulation.png)
+
+---
+
+## 4) SPICE Output
+Output results after running the SPICE simulation.
+
+![SPICE Output](Lab_Images/spice_output.png)
+
+---
+
+## 5) VDS and ID Value of One Instance
+Shows the drain-source voltage (VDS) and drain current (ID) for one MOSFET instance.
+
+![VDS and ID](Lab_Images/vds_id_value.png)
+
 
 
