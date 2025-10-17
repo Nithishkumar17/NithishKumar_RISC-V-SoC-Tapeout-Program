@@ -126,6 +126,12 @@ The SPICE code for the circuit and model definitions.
 
 ## 3) SPICE Simulation
 The simulation setup and waveform analysis view in SPICE.
+```bash
+ngspice day1_nfet_idvds_L2_W5.spice 
+```
+```ngspice 
+plot -#vddbranch
+```
 
 ![SPICE Simulation](Lab_Images/spice_simulation.jpg)
 
