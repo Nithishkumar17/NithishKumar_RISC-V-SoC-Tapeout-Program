@@ -235,6 +235,12 @@ Where:
 ![Short Channel Code](Lab_Images/shortchannel_code.jpg)
 
 ### 2) Short Channel SPICE Output
+```bash
+ngspice day2_nfet_idvds_L015_W039.spice 
+```
+```ngspice 
+plot -vdd#branch
+```
 ![Short Channel Output](Lab_Images/shortchannel_output.jpg)  
 **Observation:** The graph shows **linear behavior for higher VDS values due to velocity saturation**.
 
@@ -242,6 +248,12 @@ Where:
 ![Short Channel VGS Code](Lab_Images/shortchannel_vgs_code.jpg)
 
 ### 4) Short Channel VGS Output
+```bash
+ngspice day2_nfet_idvgs_L015_W039.spice 
+```
+```ngspice 
+plot -vdd#branch
+```
 ![Short Channel VGS Output](Lab_Images/shortchannel_vgs_output.jpg)  
 **Observation:** Threshold voltage (Vth) found to be **0.74 V** from this graph.
 
