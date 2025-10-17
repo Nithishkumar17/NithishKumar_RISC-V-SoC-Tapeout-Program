@@ -119,28 +119,28 @@ This image shows the SPICE netlist used for the simulation.
 ## 2) SPICE Code
 The SPICE code for the circuit and model definitions.
 
-![SPICE Code](Lab_Images/spice_code.png)
+![SPICE Code](Lab_Images/spice_code.jpg)
 
 ---
 
 ## 3) SPICE Simulation
 The simulation setup and waveform analysis view in SPICE.
 
-![SPICE Simulation](Lab_Images/spice_simulation.png)
+![SPICE Simulation](Lab_Images/spice_simulation.jpg)
 
 ---
 
 ## 4) SPICE Output
 Output results after running the SPICE simulation.
 
-![SPICE Output](Lab_Images/spice_output.png)
+![SPICE Output](Lab_Images/spice_output.jpg)
 
 ---
 
 ## 5) VDS and ID Value of One Instance
 Shows the drain-source voltage (VDS) and drain current (ID) for one MOSFET instance.
 
-![VDS and ID](Lab_Images/vds_id_value.png)
+![VDS and ID](Lab_Images/vds_id_value.jpg)
 
 
 
