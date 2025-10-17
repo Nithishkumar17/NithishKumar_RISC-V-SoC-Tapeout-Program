@@ -373,7 +373,5 @@ Analyze CMOS inverter behavior under **different W/L ratios** (PMOS width varied
    - CMOS inverter robustness ensures consistent switching threshold and stable timing across process variations.
    - Selecting PMOS width = 2 × NMOS width is a common design choice for **balanced inverter circuits**.
 
-**Image Placeholder:**
-
 - Robust Table / Multiple W/L Ratios  
   ![Robust Table](Lab_Images/robust_table.jpg)
