@@ -1,5 +1,6 @@
 # Week 4 — CMOS Circuit Design & SPICE Simulation  
-**Day 1**
+
+# Day 1
 
 ---
 
@@ -141,6 +142,103 @@ Output results after running the SPICE simulation.
 Shows the drain-source voltage (VDS) and drain current (ID) for one MOSFET instance.
 
 ![VDS and ID](Lab_Images/vds_id_value.jpg)
+
+
+
+
+# Day 2
+
+---
+
+## Overview
+Day 2 focuses on short-channel NMOS effects, CMOS voltage transfer characteristics (VTC), and the impact of channel length on drain current.  
+
+---
+
+## Short Channel NMOS Effects
+- Two NMOS transistors with **same W/L ratio** but different **absolute W and L** show different Id vs VGS curves.
+- For **short channel devices (L = 250 nm)**:
+  - ID vs VGS shows **linear dependence** even after pinch-off (VDS > VGS - Vth)
+  - This is due to **velocity saturation effect**:  
+    - At high electric fields, carrier velocity saturates due to scattering.
+    - Velocity is proportional to induced charges; at short channel, velocity saturates at **Vsat**.
+
+### NMOS Operating Regions (short channel)
+1. Cut-off
+2. Linear (triode)
+3. Saturation
+4. Velocity Saturation
+
+### Full Drain Current Equation (Short Channel, unified model)
+ID = (1/2) * kn * (VGS-vmin) –( Vmin² /2)* (1 + λ * VDS)
+
+
+Where:  
+ vmin = min(vgs(saturation mode),vds(linear mode),vsat(velocity saturation mode))
+ 
+**Observation:**  
+- Shorter channel length reduces drain current, longer length increases it.
+- Although W/L ratio is same, absolute length affects ID directly.
+
+---
+
+## CMOS Voltage Transfer Characteristics (VTC)
+
+### NMOS
+- Gate = VDD, Body = GND  
+- Can pass **0** from source easily (VGS > Vth)  
+- If source = VDD, NMOS passes up to **VDS - Vth**  
+- NMOS acts as **strong 0, weak 1** pull-down transistor
+
+### PMOS
+- Gate = GND, Body = VDD  
+- Can pass **VDD** from source easily (VSG > Vth)  
+- If source = 0, PMOS passes up to **Vth**  
+- PMOS acts as **strong 1, weak 0** pull-up transistor
+
+### CMOS
+- If VIN = VDD → NMOS on → load capacitor discharged  
+- If VIN = 0 → PMOS on → load capacitor charged  
+
+---
+
+### Nomenclature
+| Symbol | Description |
+|--------|-------------|
+| GS     | Gate to Source |
+| DS     | Drain to Source |
+| VGSN   | VIN (NMOS) |
+| VDSN   | VOUT (NMOS) |
+| VGSP   | VIN - VDD (PMOS) |
+| VDSP   | VOUT - VDD (PMOS) |
+| IDSN   | NMOS Drain Current |
+| IDSP   | PMOS Drain Current |
+| IDSN = -IDSP | Current relationship |
+
+- VDSN vs IDSN sweep converted to VOUT vs VIN to visualize **CMOS VTC**  
+![vtf1](Lab_Images/vtf1.jpg)
+![vtf2](Lab_Images/vtf2.jpg)
+- Intersection points in NMOS and PMOS POV combined to plot **CMOS VTF**.
+![vtf3](Lab_Images/vtf3.jpg)
+
+---
+
+## Lab – Day 2 Images
+
+### 1) Short Channel SPICE Code
+![Short Channel Code](Lab_Images/shortchannel_code.jpg)
+
+### 2) Short Channel SPICE Output
+![Short Channel Output](Lab_Images/shortchannel_output.jpg)  
+**Observation:** The graph shows **linear behavior for higher VDS values due to velocity saturation**.
+
+### 3) Short Channel VGS Code
+![Short Channel VGS Code](Lab_Images/shortchannel_vgs_code.jpg)
+
+### 4) Short Channel VGS Output
+![Short Channel VGS Output](Lab_Images/shortchannel_vgs_output.jpg)  
+**Observation:** Threshold voltage (Vth) found to be **0.74 V** from this graph.
+
 
 
 
