@@ -101,3 +101,7 @@ This shows ID slightly depends on VDS due to effective channel shortening.
 - SPICE verifies STA assumptions.
 
 ---
+
+## Lab: Day 1 
+
+
