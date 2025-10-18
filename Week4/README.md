@@ -375,3 +375,99 @@ Analyze CMOS inverter behavior under **different W/L ratios** (PMOS width varied
 
 - Robust Table / Multiple W/L Ratios  
   ![Robust Table](Lab_Images/robust_table.jpg)
+
+# Day 4
+
+## Property 2 to Evaluate CMOS Robustness: Noise Margins (NMh & NMl)
+
+In an ideal CMOS inverter, the switching point at VDD/2 has an infinite slope (output changes abruptly from 1 to 0 with zero change in input).  
+However, in practical circuits, the slope is finite, so there is no perfect inversion.
+
+---
+
+## Practical Voltage Levels
+
+| Region       | Output Level      |
+|--------------|--------------------|
+| 0 to VIL     | VOH (logic 1)       |
+| VIH to VDD   | VOL (logic 0)       |
+| VIL to VIH   | Undefined / Transition Region |
+
+VIL  - Voltage Input Low  
+VOL  - Voltage Output Low  
+VIH  - Voltage Input High  
+VOH  - Voltage Output High
+`![CMOS VTC characteristics](images/practical_cmos_characteristics.png)`
+
+---
+
+## Logic Interpretation Rules
+
+- Any value greater than VOH is logic 1 and must also be above VIH  
+- Any value lesser than VOL is logic 0 and must also be below VIL  
+- VIL to VIH is an undefined zone with finite slope
+
+If noise bumps occur within the noise margin zone, the inverter still correctly interprets logic.  
+Noise margins are used in digital design, while the undefined zone (VIL to VIH) is relevant in analog design.
+
+---
+
+## Practical Order of Voltage Levels
+
+VDD > VOH > VIH > VIL > VOL > 0
+
+---
+
+## Effect of Transistor Sizing (W/L Ratio)
+
+- Increasing W/L of PMOS compared to NMOS creates a low-resistance pull-up path, increasing high noise margin (strong logic 1, weaker logic 0)
+- Increasing W/L of NMOS compared to PMOS creates a low-resistance pull-down path, increasing low noise margin (strong logic 0, weaker logic 1)
+
+However, the difference in practical CMOS designs is usually small and does not heavily affect behavior.
+
+---
+
+# LAB: Noise Margin Extraction from VTC
+
+Noise margin of CMOS is calculated by simulating the VTC curve.
+
+### Procedure:
+1. Simulate CMOS inverter VTC.
+2. Identify points where slope = -1.
+   - First point gives VIL and VOH
+   - Second point gives VIH and VOL
+3. Use formulas:
+
+NMh = VOH – VIH  
+NMl = VIL – VOL
+
+---
+
+## Image Placeholders
+
+### 1. CMOS VTC SPICE Code  
+`![CMOS VTC Code](images/cmos_vtc_code.png)`
+
+### 2. CMOS VTC Simulation Output  
+`![CMOS VTC Output](images/cmos_vtc_output.png)`
+
+### 3. CMOS Noise Margins Plot  
+`![CMOS Noise Margins](images/cmos_noise_margins.png)`
+
+---
+
+## Observed Noise Margin Values
+
+NMh = 1.69 - 0.97 = 0.72 V  
+NMl = 0.109 - 0.778 = 0.669 V
+
+---
+
+## Conclusion
+
+- Noise margins quantify the robustness of a CMOS inverter.
+- They are extracted from VTC using the slope = -1 method.
+- Both NMh and NMl are sufficiently large, indicating reliable noise immunity.
+- Small W/L variations affect margins slightly but do not significantly affect inverter performance.
+
+
