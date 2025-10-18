@@ -424,6 +424,8 @@ VDD > VOH > VIH > VIL > VOL > 0
 - Increasing W/L of NMOS compared to PMOS creates a low-resistance pull-down path, increasing low noise margin (strong logic 0, weaker logic 1)
 
 However, the difference in practical CMOS designs is usually small and does not heavily affect behavior.
+- Robust Table with Noise Margins / Multiple W/L Ratios  
+  ![Robust Table_nm](Lab_Images/robust_table_nm.jpg)
 
 ---
 
@@ -449,6 +451,12 @@ NMl = VIL – VOL
 `![CMOS VTC Code](images/cmos_vtc_code.png)`
 
 ### 2. CMOS VTC Simulation Output  
+```bash
+ngspice day4_inv_noisemargin_wp1_wn036.spice 
+```
+```ngspice 
+plot out vs in 
+```
 `![CMOS VTC Output](images/cmos_vtc_output.png)`
 
 ### 3. CMOS Noise Margins Plot  
