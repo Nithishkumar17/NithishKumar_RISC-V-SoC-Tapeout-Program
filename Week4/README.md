@@ -507,7 +507,27 @@ Gain slightly increases as VDD decreases.
 However, overall CMOS VTC behavior remains similar.
 
 ---
+## Power Supply Scaling Lab
 
+### 1. Supply Variation SPICE Code  
+![Supply Variation Code](Lab_Images/supply_variation_code.jpg)
+
+### 2. Supply Variation Output (VTC)  
+```bash
+ngspice  day5_inv_supplyvariation_Wp1_Wn036.spice
+```
+```ngspice 
+plot out vs in 
+```
+![Supply Variation Output](Lab_Images/supply_variation_output.jpg)
+
+### 3. High Power Supply Gain  
+![High Power Supply Gain](Lab_Images/highps_gain.jpg)
+
+### 4. Low Power Supply Gain  
+![Low Power Supply Gain](Lab_Images/lowps_gain.jpg)
+
+---
 ## Property 4: Device Variation
 
 Device variations occur due to fabrication mismatch such as:
@@ -544,30 +564,6 @@ Example case used: Strong PMOS and Weak NMOS.
 - CMOS inverter maintains operation even under power supply scaling and device variation.
 - Shifts in switching threshold and noise margins are minimal.
 - Robustness of CMOS ensures digital circuit functionality remains intact.
-
----
-
-# Image Placeholders
-
-## Power Supply Scaling Lab
-
-### 1. Supply Variation SPICE Code  
-![Supply Variation Code](Lab_Images/supply_variation_code.jpg)
-
-### 2. Supply Variation Output (VTC)  
-```bash
-ngspice  day5_inv_supplyvariation_Wp1_Wn036.spice
-```
-```ngspice 
-plot out vs in 
-```
-![Supply Variation Output](Lab_Images/supply_variation_output.jpg)
-
-### 3. High Power Supply Gain  
-![High Power Supply Gain](Lab_Images/highps_gain.jpg)
-
-### 4. Low Power Supply Gain  
-![Low Power Supply Gain](Lab_Images/lowps_gain.jpg)
 
 ---
 
