@@ -479,4 +479,111 @@ NMl = 0.109 - 0.778 = 0.669 V
 - Both NMh and NMl are sufficiently large, indicating reliable noise immunity.
 - Small W/L variations affect margins slightly but do not significantly affect inverter performance.
 
+# Day 5 – CMOS Inverter Robustness (Continued)
 
+## Property 3: Power Supply Scalability
+
+### Advantages of Using Low Supply Voltage
+- Lower power consumption
+- Higher gain compared to using a higher supply voltage
+- Better energy efficiency
+
+### Disadvantage
+- Lower voltage increases delay  
+  (Takes more time to charge/discharge load capacitance → slower operation)
+
+---
+
+## LAB: Power Supply Scaling
+
+VTC of CMOS inverter is simulated at different supply voltages (e.g., 1.8V and 0.8V).
+Result: CMOS characteristics (shape of VTC) do not change significantly with scaling.
+
+### Gain Observation
+At VDD = 1.8V → Gain = 7.52  
+At VDD = 0.8V → Gain = 9.11
+
+Gain slightly increases as VDD decreases.  
+However, overall CMOS VTC behavior remains similar.
+
+---
+
+## Property 4: Device Variation
+
+Device variations occur due to fabrication mismatch such as:
+- Etching (variation in W and L)
+- Oxide thickness variation
+
+### Impact on Device Parameters
+- W/L ∝ Drain current
+- Oxide capacitance (Cox) ∝ 1 / oxide thickness  
+  (Cox ∝ drain current)
+
+Even though these variations affect drain current, **CMOS inverters remain robust** and maintain functionality.
+
+---
+
+## LAB: Device Variation
+
+To demonstrate robustness:
+- Different transistor widths are chosen.
+- Wide PMOS → Strong pull-up (low resistance)
+- Narrow NMOS → Weak pull-down (high resistance)
+
+Example case used: Strong PMOS and Weak NMOS.
+
+### Observations:
+- Shift in Vm (switching threshold) is small  
+  (Vm found where 45° line intersects VTC)
+- Noise margins NMh and NMl change very little
+- Digital operation remains correct
+
+---
+
+## Conclusion
+- CMOS inverter maintains operation even under power supply scaling and device variation.
+- Shifts in switching threshold and noise margins are minimal.
+- Robustness of CMOS ensures digital circuit functionality remains intact.
+
+---
+
+# Image Placeholders
+
+## Power Supply Scaling Lab
+
+### 1. Supply Variation SPICE Code  
+![Supply Variation Code](images/supply_variation_code.jpg)
+
+### 2. Supply Variation Output (VTC)  
+```bash
+ngspice  day5_inv_supplyvariation_Wp1_Wn036.spice
+```
+```ngspice 
+plot out vs in 
+```
+![Supply Variation Output](images/supply_variation_output.jpg)
+
+### 3. High Power Supply Gain  
+![High Power Supply Gain](images/highps_gain.jpg)
+
+### 4. Low Power Supply Gain  
+![Low Power Supply Gain](images/lowps_gain.jpg)
+
+---
+
+## Device Variation Lab
+
+### 1. Device Variation SPICE Code  
+![Device Variation Code](images/device_variation_code.jpg)`
+
+### 2. Device Variation Output (VTC)  
+```bash
+ngspice  day5_inv_devicevariation_wp7_wn042.spice 
+```
+```ngspice 
+plot out vs in 
+```
+![Device Variation Output](images/device_variation_output.jpg)`
+
+### 3. Switching Threshold under Device Variation  
+![Switching Threshold Device Variation](images/switching_thresholf_device_variation.jpg)
