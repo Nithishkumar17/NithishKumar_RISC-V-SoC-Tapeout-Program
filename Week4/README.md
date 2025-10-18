@@ -397,7 +397,7 @@ VIL  - Voltage Input Low
 VOL  - Voltage Output Low  
 VIH  - Voltage Input High  
 VOH  - Voltage Output High
-`![CMOS VTC characteristics](images/practical_cmos_characteristics.png)`
+![CMOS VTC characteristics](Lab_Images/practical_cmos_characteristics.png)
 
 ---
 
@@ -448,7 +448,7 @@ NMl = VIL – VOL
 ## Image Placeholders
 
 ### 1. CMOS VTC SPICE Code  
-`![CMOS VTC Code](images/cmos_vtc_code.png)`
+![CMOS VTC Code](Lab_Images/cmos_vtc_code.png)
 
 ### 2. CMOS VTC Simulation Output  
 ```bash
@@ -457,10 +457,11 @@ ngspice day4_inv_noisemargin_wp1_wn036.spice
 ```ngspice 
 plot out vs in 
 ```
-`![CMOS VTC Output](images/cmos_vtc_output.png)`
+
+![CMOS VTC Output](Lab_Images/cmos_vtc_output.pn)
 
 ### 3. CMOS Noise Margins Plot  
-`![CMOS Noise Margins](images/cmos_noise_margins.png)`
+![CMOS Noise Margins](Lab_Images/cmos_noise_margins.pn)
 
 ---
 
