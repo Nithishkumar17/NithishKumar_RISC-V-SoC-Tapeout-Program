@@ -552,7 +552,7 @@ Example case used: Strong PMOS and Weak NMOS.
 ## Power Supply Scaling Lab
 
 ### 1. Supply Variation SPICE Code  
-![Supply Variation Code](images/supply_variation_code.jpg)
+![Supply Variation Code](Lab_Images/supply_variation_code.jpg)
 
 ### 2. Supply Variation Output (VTC)  
 ```bash
@@ -561,20 +561,20 @@ ngspice  day5_inv_supplyvariation_Wp1_Wn036.spice
 ```ngspice 
 plot out vs in 
 ```
-![Supply Variation Output](images/supply_variation_output.jpg)
+![Supply Variation Output](Lab_Images/supply_variation_output.jpg)
 
 ### 3. High Power Supply Gain  
-![High Power Supply Gain](images/highps_gain.jpg)
+![High Power Supply Gain](Lab_Images/highps_gain.jpg)
 
 ### 4. Low Power Supply Gain  
-![Low Power Supply Gain](images/lowps_gain.jpg)
+![Low Power Supply Gain](Lab_Images/lowps_gain.jpg)
 
 ---
 
 ## Device Variation Lab
 
 ### 1. Device Variation SPICE Code  
-![Device Variation Code](images/device_variation_code.jpg)`
+![Device Variation Code](Lab_Images/device_variation_code.jpg)
 
 ### 2. Device Variation Output (VTC)  
 ```bash
@@ -583,7 +583,7 @@ ngspice  day5_inv_devicevariation_wp7_wn042.spice
 ```ngspice 
 plot out vs in 
 ```
-![Device Variation Output](images/device_variation_output.jpg)`
+![Device Variation Output](Lab_Images/device_variation_output.jpg)
 
 ### 3. Switching Threshold under Device Variation  
-![Switching Threshold Device Variation](images/switching_thresholf_device_variation.jpg)
+![Switching Threshold Device Variation](Lab_Images/switching_thresholf_device_variation.jpg)
