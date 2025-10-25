@@ -1,8 +1,32 @@
-# Week 5 - OpenROAD Installation Report
+# Week 5 Task – OpenROAD Flow Setup and Floorplan + Placement
+
+## Objective
+To set up the OpenROAD Flow Scripts environment and execute the Floorplan and Placement stages of the physical design flow. This task transitions you from SPICE-level transistor design (Week 4) to backend implementation, where logic is converted into an actual physical layout.
+
+## Why This Task Is Important
+After understanding how timing arises from transistor-level circuits, it’s time to see how
+those circuits are physically realized on silicon. This task introduces you to OpenROAD, an open-source RTL-to-GDSII flow widely used in academic and industrial research.
+
+Learning to perform floorplanning and placement helps you understand:
+• How design constraints are applied before routing.
+• How standard cells are arranged to minimize delay, area, and congestion.
+• How physical design choices affect timing and manufacturability.
+This is your first step toward a full physical implementation flow in VLSI design.
+Task Reference
+Use the following repository as your reference for installation and running the required flow
+steps:
+OpenROAD Reference – https://github.com/spatha0011/spatha_vsdhdp/blob/main/Day14/README.md
 
 ## Terminal Screenshots with Commands
 
-### 1. Dependency Installation
+### 1. ### 1. Clone the OpenROAD Repository
+
+```bash
+git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
+cd OpenROAD-flow-scripts
+```
+
+### 2. Dependency Installation
 ```bash
 sudo ./setup.sh
 ```
@@ -10,7 +34,7 @@ sudo ./setup.sh
 
 ---
 
-### 2. OpenROAD Build
+### 3. OpenROAD Build
 ```bash
 rm -rf tools/OpenROAD/build
 ./build_openroad.sh --local --threads 1 --openroad-args "-DENABLE_DIST_TESTS=OFF"
@@ -19,7 +43,7 @@ rm -rf tools/OpenROAD/build
 
 ---
 
-### 3. Environment Setup & Verification
+### 4. Environment Setup & Verification
 ```bash
 source ./env.sh
 openroad -help
@@ -29,7 +53,7 @@ yosys -help
 
 ---
 
-### 4. Design Flow Execution
+### 5. Design Flow Execution
 ```bash
 cd ~/OpenROAD-flow-scripts/flow
 make
@@ -38,7 +62,7 @@ make
 
 ---
 
-### 5. GUI Generation
+### 6. GUI Generation
 ```bash
 make gui_final
 ```
@@ -46,7 +70,7 @@ make gui_final
 
 ---
 
-### 6. Directory Verification
+### 7. Directory Verification
 ```bash
 ls OpenROAD-flow-scripts
 ls flow
@@ -55,7 +79,7 @@ ls flow
 
 ---
 
-## Generated Output Files
+## 8. Generated Output Files
 ```bash
 cd OpenROAD-flow-scripts/flow/results/nangate45/gcd/base
 ```
