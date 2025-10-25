@@ -25,7 +25,7 @@ source ./env.sh
 openroad -help
 yosys -help
 ```
-![Environment Verification](Lab_Images/installation_verification)
+![Environment Verification](Lab_Images/installation_verification.jpg)
 
 ---
 
@@ -34,7 +34,7 @@ yosys -help
 cd ~/OpenROAD-flow-scripts/flow
 make
 ```
-![Design Flow](installation_verification/flow.jpg)
+![Design Flow](Lab_Images/flow.jpg)
 
 ---
 
@@ -42,7 +42,7 @@ make
 ```bash
 make gui_final
 ```
-![GUI Generation](Lab_Images/gui_final)
+![GUI Generation](Lab_Images/gui_final.jpg)
 
 ---
 
@@ -51,7 +51,7 @@ make gui_final
 ls OpenROAD-flow-scripts
 ls flow
 ```
-![Directory Structure](Lab_Images/directory_verification)
+![Directory Structure](Lab_Images/directory_verification.jpg)
 
 ---
 
