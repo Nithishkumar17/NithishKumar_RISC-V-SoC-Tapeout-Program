@@ -19,7 +19,7 @@ OpenROAD Reference – https://github.com/spatha0011/spatha_vsdhdp/blob/main/Day
 
 ## Terminal Screenshots with Commands
 
-### 1. ### 1. Clone the OpenROAD Repository
+### 1. Clone the OpenROAD Repository
 
 ```bash
 git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts
